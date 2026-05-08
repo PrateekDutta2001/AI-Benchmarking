@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI Model Benchmarking 2026 — Frontier vs. Open-Source</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="header-badge">Strategic Research Report · 2026</div>
+      <h1 class="header-title">AI Model Benchmarking<br><em>2026 Edition</em></h1>
+      <p class="header-sub">A comprehensive performance analysis of frontier, open-source, and search-augmented AI models — for technology leaders navigating the most competitive AI landscape in history.</p>
+    </div>
+    <div class="header-right">
+      <div class="header-stat-row">
+        <div class="hstat">
+          <div class="hstat-num">16</div>
+          <div class="hstat-label">Models</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">4</div>
+          <div class="hstat-label">Benchmarks</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">3</div>
+          <div class="hstat-label">Paradigms</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">Q2</div>
+          <div class="hstat-label">2026 Data</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="insight-strip">
+  <div class="insight-ticker" id="ticker">
+    <div class="insight-item"><div class="insight-dot"></div>MMLU Gap: 17.5% (2024) → 0.3% (2026) — Benchmark parity achieved</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#0E7C6B"></div>DeepSeek V4: 83.7% SWE-bench Verified — Beats GPT-4.1 on coding</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#6B3FB5"></div>Perplexity Sonar Huge: Real-time web search + 94% MMLU — Live knowledge frontier</div>
+    <div class="insight-item"><div class="insight-dot" style="background:var(--gold)"></div>Arena Elo Leaders: Anthropic 1503 · xAI 1495 · Google 1494 · OpenAI 1481</div>
+    <div class="insight-item"><div class="insight-dot"></div>Claude Opus 4.6: #1 coding arena Elo (1548) — Prose & reasoning leader</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#0E7C6B"></div>GLM-5: First frontier model trained entirely on non-NVIDIA hardware</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#6B3FB5"></div>Perplexity Pro: $20/mo — Most affordable search-augmented AI subscription</div>
+    <!-- duplicate for loop -->
+    <div class="insight-item"><div class="insight-dot"></div>MMLU Gap: 17.5% (2024) → 0.3% (2026) — Benchmark parity achieved</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#0E7C6B"></div>DeepSeek V4: 83.7% SWE-bench Verified — Beats GPT-4.1 on coding</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#6B3FB5"></div>Perplexity Sonar Huge: Real-time web search + 94% MMLU — Live knowledge frontier</div>
+    <div class="insight-item"><div class="insight-dot" style="background:var(--gold)"></div>Arena Elo Leaders: Anthropic 1503 · xAI 1495 · Google 1494 · OpenAI 1481</div>
+    <div class="insight-item"><div class="insight-dot"></div>Claude Opus 4.6: #1 coding arena Elo (1548) — Prose & reasoning leader</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#0E7C6B"></div>GLM-5: First frontier model trained entirely on non-NVIDIA hardware</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#6B3FB5"></div>Perplexity Pro: $20/mo — Most affordable search-augmented AI subscription</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="main-wrap">
+
+  <!-- TABS -->
+  <div class="tab-row">
+    <button class="tab-btn active" onclick="switchTab('benchmarks', this)">
+      <span class="tab-icon">📊</span> Benchmarks
+    </button>
+    <button class="tab-btn" onclick="switchTab('trends', this)">
+      <span class="tab-icon">📈</span> Trends & ELO
+    </button>
+    <button class="tab-btn" onclick="switchTab('comparison', this)">
+      <span class="tab-icon">⚖️</span> Comparison
+    </button>
+    <button class="tab-btn" onclick="switchTab('strategy', this)">
+      <span class="tab-icon">🗺️</span> Strategy
+    </button>
+    <button class="tab-btn" onclick="switchTab('findings', this)">
+      <span class="tab-icon">🔬</span> Findings
+    </button>
+    <button class="tab-btn" onclick="switchTab('abbreviations', this)">
+      <span class="tab-icon">📖</span> Abbreviations
+    </button>
+  </div>
+
+  <!-- ═══ TAB: BENCHMARKS ═══ -->
+  <div class="tab-panel active" id="tab-benchmarks">
+
+    <div class="section-heading">
+      <div class="section-label-tag">// Model Benchmarks · 2026</div>
+      <h2>Performance <em>Matrix</em></h2>
+      <p>Comprehensive benchmark scores across key evaluation frameworks — now including Perplexity search-augmented models alongside frontier and open-source.</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls-card">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="search-input" type="text" id="benchSearchBox" placeholder="Search models, organisations, or metrics…" oninput="filterBench()">
+      </div>
+      <select class="filter-select" id="benchTypeFilter" onchange="filterBench()">
+        <option value="">All types</option>
+        <option value="Frontier">Frontier</option>
+        <option value="Open-Source">Open-Source</option>
+        <option value="Perplexity">Perplexity / Search-Augmented</option>
+      </select>
+      <div class="controls-divider"></div>
+      <button class="btn btn-outline" onclick="exportBenchCSV()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Export CSV
+      </button>
+    </div>
+
+    <!-- Pills -->
+    <div class="pill-row">
+      <button type="button" class="pill pill-all" id="bench-pill-all" onclick="setBenchPill('')">All Models</button>
+      <button type="button" class="pill pill-cat" data-cat="Frontier" onclick="setBenchPill('Frontier')">🔬 Frontier / Proprietary</button>
+      <button type="button" class="pill pill-cat" data-cat="Open-Source" onclick="setBenchPill('Open-Source')">🔓 Open-Source</button>
+      <button type="button" class="pill pill-cat" data-cat="Perplexity" onclick="setBenchPill('Perplexity')">🌐 Perplexity / Search-Aug.</button>
+    </div>
+
+    <!-- Results meta -->
+    <div class="results-meta">
+      <div class="results-count">Showing <strong id="benchFilteredCount">16</strong> of <strong id="benchTotalCount">16</strong> models</div>
+    </div>
+
+    <!-- Benchmark Table -->
+    <div class="table-card">
+      <table class="bench-table">
+        <colgroup>
+          <col class="col-rank"><col class="col-model"><col class="col-type">
+          <col class="col-score"><col class="col-score"><col class="col-score"><col class="col-score">
+          <col class="col-ctx"><col class="col-cost">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>GPQA Diamond</th>
+            <th>SWE-bench</th>
+            <th>MMLU-Pro</th>
+            <th>AIME 2026</th>
+            <th>Context</th>
+            <th>API Cost (input/M)</th>
+          </tr>
+        </thead>
+        <tbody id="benchTableBody"></tbody>
+      </table>
+      <div id="benchEmptyState" class="empty-state" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <strong>No models found</strong>
+        <p>Try a different search term or type filter.</p>
+      </div>
+    </div>
+
+    <p style="font-size:12px;color:var(--slate);margin-top:12px;font-family:var(--font-mono);">* Perplexity Sonar models are search-augmented; GPQA/SWE scores reflect underlying base model + retrieval. Context = live web.</p>
+
+  </div>
+
+  <!-- ═══ TAB: TRENDS & ELO ═══ -->
+  <div class="tab-panel" id="tab-trends">
+
+    <div class="section-heading">
+      <div class="section-label-tag">// Historical Trends</div>
+      <h2>Closing the <em>Gap</em></h2>
+      <p>MMLU performance divergence between frontier and open-source models over time — the moat has nearly vanished.</p>
+    </div>
+
+    <div class="section-card">
+      <div class="section-card-title">MMLU Benchmark Trend (2024–2026)</div>
+      <div class="section-card-sub">Average MMLU scores for frontier vs. open-source vs. search-augmented (Perplexity) models over time.</div>
+      <div class="chart-canvas-wrap">
+        <canvas id="trendChart"></canvas>
+      </div>
+      <div class="chart-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#2E4A7A"></div>Frontier Models (Avg. MMLU)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#0E7C6B"></div>Open-Source Models (Avg. MMLU)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#6B3FB5"></div>Perplexity / Search-Augmented</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--gold)"></div>Gap (pp)</div>
+      </div>
+    </div>
+
+    <hr class="section-divider"/>
+
+    <div class="section-heading">
+      <div class="section-label-tag">// Chatbot Arena · March 2026</div>
+      <h2>Arena <em>ELO Ratings</em></h2>
+      <p>Human preference rankings from blind comparisons across 500K+ conversations. Six labs now clustered at the frontier.</p>
+    </div>
+
+    <div class="section-card">
+      <div class="section-card-title">Organisation ELO Scores</div>
+      <div class="section-card-sub">Based on LMSYS Chatbot Arena blind pairwise comparison. Higher = preferred by humans.</div>
+      <div class="elo-bars" id="eloBars"></div>
+    </div>
+
+  </div>
+
+  <!-- ═══ TAB: COMPARISON ═══ -->
+  <div class="tab-panel" id="tab-comparison">
+
+    <div class="section-heading">
+      <div class="section-label-tag">// Strategic Comparison</div>
+      <h2>Frontier vs. Open-Source <em>vs. Search-Augmented</em></h2>
+      <p>Where each paradigm excels and falls short for enterprise deployment in 2026 — including Perplexity as a distinct third category.</p>
+    </div>
+
+    <div class="comparison-grid">
+      <div class="comp-card frontier-card">
+        <div class="comp-header">
+          <div class="comp-icon icon-frontier">🔬</div>
+          <div>
+            <div class="comp-title">Frontier / Proprietary</div>
+            <div class="comp-sub">GPT-5.4, Claude Opus 4.6, Gemini 3.1</div>
+          </div>
+        </div>
+        <div class="metric-row"><span class="metric-label">Peak GPQA Diamond</span><span class="metric-value val-frontier">94.6%</span></div>
+        <div class="metric-row"><span class="metric-label">Best SWE-bench</span><span class="metric-value val-frontier">80.8%</span></div>
+        <div class="metric-row"><span class="metric-label">Context Window (max)</span><span class="metric-value val-neutral">1M tokens</span></div>
+        <div class="metric-row"><span class="metric-label">API Cost (output/M)</span><span class="metric-value val-amber">$15–$25</span></div>
+        <div class="metric-row"><span class="metric-label">Self-Hosting</span><span class="metric-value val-red">Not Available</span></div>
+        <div class="metric-row"><span class="metric-label">Data Sovereignty</span><span class="metric-value val-amber">Via enterprise tiers</span></div>
+        <div class="metric-row"><span class="metric-label">Fine-Tuning Access</span><span class="metric-value val-amber">Limited / API-only</span></div>
+        <div class="metric-row"><span class="metric-label">Live Web Search</span><span class="metric-value val-amber">Optional add-on</span></div>
+        <div class="metric-row"><span class="metric-label">Multimodal Support</span><span class="metric-value val-frontier">Full (text, vision, audio)</span></div>
+      </div>
+
+      <div class="comp-card open-card">
+        <div class="comp-header">
+          <div class="comp-icon icon-open">🔓</div>
+          <div>
+            <div class="comp-title">Open-Source / Open-Weight</div>
+            <div class="comp-sub">Llama 4, DeepSeek V4, Qwen 3.6, GLM-5</div>
+          </div>
+        </div>
+        <div class="metric-row"><span class="metric-label">Peak GPQA Diamond</span><span class="metric-value val-open">90.5% (Kimi K2.6)</span></div>
+        <div class="metric-row"><span class="metric-label">Best SWE-bench</span><span class="metric-value val-open">83.7% (DeepSeek V4)</span></div>
+        <div class="metric-row"><span class="metric-label">Context Window (max)</span><span class="metric-value val-neutral">1M+ tokens</span></div>
+        <div class="metric-row"><span class="metric-label">Hosted API Cost (output/M)</span><span class="metric-value val-open">$0.20–$2.20</span></div>
+        <div class="metric-row"><span class="metric-label">Self-Hosting</span><span class="metric-value val-open">✓ Full control</span></div>
+        <div class="metric-row"><span class="metric-label">Data Sovereignty</span><span class="metric-value val-open">Complete (on-prem)</span></div>
+        <div class="metric-row"><span class="metric-label">Fine-Tuning Access</span><span class="metric-value val-open">Full weight access</span></div>
+        <div class="metric-row"><span class="metric-label">Live Web Search</span><span class="metric-value val-red">Not native</span></div>
+        <div class="metric-row"><span class="metric-label">Infrastructure Cost</span><span class="metric-value val-amber">$6–40/hr (frontier quality)</span></div>
+      </div>
+
+      <div class="comp-card perp-card">
+        <div class="comp-header">
+          <div class="comp-icon icon-perplexity">🌐</div>
+          <div>
+            <div class="comp-title">Perplexity / Search-Augmented</div>
+            <div class="comp-sub">Sonar Small, Sonar, Sonar Huge, Deep Research</div>
+          </div>
+        </div>
+        <div class="metric-row"><span class="metric-label">Peak GPQA Diamond</span><span class="metric-value val-perplexity">~90% (Sonar Huge)</span></div>
+        <div class="metric-row"><span class="metric-label">Best SWE-bench</span><span class="metric-value val-amber">N/A (search-native)</span></div>
+        <div class="metric-row"><span class="metric-label">Context Window</span><span class="metric-value val-neutral">Live web + 128K</span></div>
+        <div class="metric-row"><span class="metric-label">API Cost (per 1K)</span><span class="metric-value val-perplexity">$0.005–$0.08</span></div>
+        <div class="metric-row"><span class="metric-label">Self-Hosting</span><span class="metric-value val-red">Not Available</span></div>
+        <div class="metric-row"><span class="metric-label">Data Sovereignty</span><span class="metric-value val-amber">Via enterprise plan</span></div>
+        <div class="metric-row"><span class="metric-label">Fine-Tuning Access</span><span class="metric-value val-red">Not Available</span></div>
+        <div class="metric-row"><span class="metric-label">Live Web Search</span><span class="metric-value val-perplexity">✓ Native + Citations</span></div>
+        <div class="metric-row"><span class="metric-label">Knowledge Freshness</span><span class="metric-value val-perplexity">Real-time (minutes old)</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══ TAB: STRATEGY ═══ -->
+  <div class="tab-panel" id="tab-strategy">
+
+    <div class="section-heading">
+      <div class="section-label-tag">// Business Strategy · 2026</div>
+      <h2>Strategic <em>Decision Framework</em></h2>
+      <p>Actionable guidance for AI deployment decisions based on organisation type, use case, and risk profile — updated to include Perplexity for research-intensive workflows.</p>
+    </div>
+
+    <div class="strategy-grid">
+      <div class="strat-card c1">
+        <span class="strat-emoji">🏢</span>
+        <div class="strat-title">Enterprise RAG & Document AI</div>
+        <div class="strat-desc">Frontier models (Claude Opus 4.6, GPT-5.4) deliver superior MMLU-Pro + IFEval scores. Use managed APIs for faster iteration; prioritize GPQA Diamond > 75% for legal/financial review workflows.</div>
+        <span class="strat-tag tag-frontier">Frontier Preferred</span>
+      </div>
+      <div class="strat-card c2">
+        <span class="strat-emoji">💻</span>
+        <div class="strat-title">Software Engineering Agents</div>
+        <div class="strat-desc">DeepSeek V4 beats GPT-4.1 on SWE-bench at a fraction of the cost. For coding pipelines processing large codebases, open-source at $0.07–$0.20/M tokens offers extraordinary ROI.</div>
+        <span class="strat-tag tag-open">Open-Source Preferred</span>
+      </div>
+      <div class="strat-card c3">
+        <span class="strat-emoji">🔒</span>
+        <div class="strat-title">Regulated Industries (BFSI, Healthcare)</div>
+        <div class="strat-desc">Deploy Llama 4 or Qwen 3.6 on-prem for complete data sovereignty. Self-hosted open models now match frontier on most benchmarks while eliminating 3rd-party data exposure risk entirely.</div>
+        <span class="strat-tag tag-open">Open-Source + On-Prem</span>
+      </div>
+      <div class="strat-card c4">
+        <span class="strat-emoji">🌍</span>
+        <div class="strat-title">Multilingual & Global Products</div>
+        <div class="strat-desc">Qwen 3.6-235B covers 200+ languages with 22B active parameters via MoE — dramatically cheaper inference than dense models. Strong CJKV performance outpaces frontier models in non-English tasks.</div>
+        <span class="strat-tag tag-open">Open-Source Preferred</span>
+      </div>
+      <div class="strat-card c5">
+        <span class="strat-emoji">🔍</span>
+        <div class="strat-title">Real-Time Research & Fact-Checking</div>
+        <div class="strat-desc">Perplexity Sonar Huge delivers real-time cited answers at $0.08/1K — far cheaper than building your own RAG pipeline. Perplexity Deep Research matches analyst-grade outputs for market intelligence workflows.</div>
+        <span class="strat-tag tag-hybrid">Perplexity Preferred</span>
+      </div>
+      <div class="strat-card c6">
+        <span class="strat-emoji">⚡</span>
+        <div class="strat-title">High-Volume, Latency-Sensitive APIs</div>
+        <div class="strat-desc">Route complex queries to frontier; standard queries to Claude Sonnet 4.6 or Qwen 3.5; search tasks to Perplexity Sonar Small. Intelligent routing can cut costs 60–70% with negligible quality loss.</div>
+        <span class="strat-tag tag-hybrid">Hybrid Routing</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══ TAB: FINDINGS ═══ -->
+  <div class="tab-panel" id="tab-findings">
+
+    <div class="section-heading">
+      <div class="section-label-tag">// Key Findings</div>
+      <h2>Research <em>Conclusions</em></h2>
+      <p>Critical takeaways from the 2026 AI Index Report, Perplexity API analysis, and third-party benchmark studies.</p>
+    </div>
+
+    <div class="findings-list">
+      <div class="finding-item">
+        <div class="finding-num-small">01</div>
+        <div class="finding-text"><strong>The moat collapsed, not eroded.</strong> The MMLU benchmark gap between open-source and frontier models narrowed from 17.5 percentage points to just 0.3 pp in a single year — an unprecedented compression of the performance frontier.</div>
+      </div>
+      <div class="finding-item">
+        <div class="finding-num-small">02</div>
+        <div class="finding-text"><strong>No single model dominates every task.</strong> Claude Opus 4.6 leads coding arena ELO; Gemini 3.1 Pro leads GPQA Diamond; GPT-5.4 leads computer use (OSWorld 75%); Grok 4 leads HLE. Task-specific selection now matters more than brand loyalty.</div>
+      </div>
+      <div class="finding-item">
+        <div class="finding-num-small">03</div>
+        <div class="finding-text"><strong>Open-source now beats frontier on coding.</strong> DeepSeek V4 achieves 83.7% SWE-bench Verified — surpassing GPT-4.1 and Claude Sonnet on multiple benchmarks while available at $0.07/M tokens with cache hits.</div>
+      </div>
+      <div class="finding-item">
+        <div class="finding-num-small">04</div>
+        <div class="finding-text"><strong>Perplexity redefines the knowledge freshness curve.</strong> Search-augmented models eliminate the knowledge cutoff problem entirely. Perplexity Sonar Huge achieves ~90% GPQA with citations from sources published minutes ago — a fundamentally different proposition from static trained models.</div>
+      </div>
+      <div class="finding-item">
+        <div class="finding-num-small">05</div>
+        <div class="finding-text"><strong>Hardware diversification is real.</strong> GLM-5's training on Huawei Ascend chips proves frontier models no longer require NVIDIA hardware — with direct implications for supply chain resilience strategy.</div>
+      </div>
+      <div class="finding-item">
+        <div class="finding-num-small">06</div>
+        <div class="finding-text"><strong>Benchmark saturation demands new evaluation.</strong> MMLU, HumanEval, and HellaSwag have all crossed 90%+ saturation. GPQA Diamond and SWE-bench Verified are now the gold-standard discriminators for 2026.</div>
+      </div>
+      <div class="finding-item">
+        <div class="finding-num-small">07</div>
+        <div class="finding-text"><strong>Prompt quality > model selection.</strong> Well-crafted prompts with mid-tier models frequently outperform poorly prompted frontier models. The optimal 2026 architecture routes tasks by complexity, latency, and cost — not by default to the most expensive model.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══ TAB: ABBREVIATIONS ═══ -->
+  <div class="tab-panel" id="tab-abbreviations">
+
+    <div class="section-heading">
+      <div class="section-label-tag">// Glossary</div>
+      <h2>Abbreviations & <em>Key Terms</em></h2>
+      <p>A comprehensive reference of all technical terms, benchmark names, and acronyms used throughout this report — organised by category for quick lookup.</p>
+    </div>
+
+    <div class="abbrev-grid">
+
+      <!-- BENCHMARKS -->
+      <div class="abbrev-card">
+        <div class="abbrev-card-header">📊 Benchmark & Evaluation Terms</div>
+        <table class="abbrev-table">
+          <tr>
+            <td class="abbrev-term">GPQA Diamond</td>
+            <td class="abbrev-def">Graduate-Level Google-Proof Q&A Diamond Set<em>Hard PhD-level questions in science, designed to be unsearchable by non-experts. Scored out of 100%.</em><span class="abbrev-tag at-benchmark">Benchmark</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">SWE-bench</td>
+            <td class="abbrev-def">Software Engineering Benchmark (Verified)<em>Tests whether models can resolve real GitHub issues. "Verified" uses human-reviewed subset for reliability.</em><span class="abbrev-tag at-benchmark">Benchmark</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">MMLU</td>
+            <td class="abbrev-def">Massive Multitask Language Understanding<em>57-subject academic test covering STEM, humanities, social sciences. MMLU-Pro is a harder variant.</em><span class="abbrev-tag at-benchmark">Benchmark</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">MMLU-Pro</td>
+            <td class="abbrev-def">MMLU Professional Variant<em>Harder version with 10-option MCQs and more reasoning-heavy questions. Reduces guessing-bias from original.</em><span class="abbrev-tag at-benchmark">Benchmark</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">AIME</td>
+            <td class="abbrev-def">American Invitational Mathematics Examination<em>High-school competition maths; used to test advanced numerical reasoning. AIME 2026 = latest problem set.</em><span class="abbrev-tag at-benchmark">Benchmark</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">HumanEval</td>
+            <td class="abbrev-def">Human Evaluation Benchmark (OpenAI)<em>164 Python coding problems; pass@k measures how often models solve problems in k attempts.</em><span class="abbrev-tag at-benchmark">Benchmark</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">HLE</td>
+            <td class="abbrev-def">Humanity's Last Exam<em>Extremely difficult 3,000-question benchmark from Scale AI; tests near-ceiling AI capabilities.</em><span class="abbrev-tag at-benchmark">Benchmark</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">ARC-AGI-2</td>
+            <td class="abbrev-def">Abstraction and Reasoning Corpus v2 (AGI benchmark)<em>Pattern-matching visual puzzles designed to test generalisation, not memorisation.</em><span class="abbrev-tag at-benchmark">Benchmark</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">HellaSwag</td>
+            <td class="abbrev-def">Harder Endings, Longer contexts, Lowercased Activities<em>Common-sense NLI benchmark; now saturated (>95% accuracy) for frontier models.</em><span class="abbrev-tag at-benchmark">Benchmark</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">IFEval</td>
+            <td class="abbrev-def">Instruction Following Evaluation<em>Tests whether models follow precise formatting/length/keyword instructions in responses.</em><span class="abbrev-tag at-benchmark">Benchmark</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">OSWorld</td>
+            <td class="abbrev-def">Operating System World Benchmark<em>Tests AI agents on real computer-use tasks (GUI navigation, file management). GPT-5.4 leads at 75%.</em><span class="abbrev-tag at-benchmark">Benchmark</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- MODELS & ORGS -->
+      <div class="abbrev-card">
+        <div class="abbrev-card-header">🤖 Model & Organisation Abbreviations</div>
+        <table class="abbrev-table">
+          <tr>
+            <td class="abbrev-term">GPT</td>
+            <td class="abbrev-def">Generative Pre-trained Transformer<em>OpenAI's flagship model family. GPT-5.4 is the 2026 iteration used in this report.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">LLM</td>
+            <td class="abbrev-def">Large Language Model<em>Any neural model trained on massive text corpora to predict/generate language. Umbrella term for all models here.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">GLM</td>
+            <td class="abbrev-def">General Language Model<em>Zhipu AI / THU's model family. GLM-5 is notable for training on Huawei Ascend (non-NVIDIA) hardware.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">CJKV</td>
+            <td class="abbrev-def">Chinese, Japanese, Korean, Vietnamese<em>Languages where open-source models (esp. Qwen) outperform Western frontier models.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">xAI</td>
+            <td class="abbrev-def">xAI Corporation (Elon Musk)<em>Makers of the Grok model family. Grok 4 is the 2026 frontier model competing in HLE benchmarks.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">THU</td>
+            <td class="abbrev-def">Tsinghua University<em>Co-developer of GLM/ChatGLM series alongside Zhipu AI.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">Sonar</td>
+            <td class="abbrev-def">Perplexity AI's Search-Augmented Model Family<em>Sonar Small / Sonar / Sonar Huge — LLMs with real-time web retrieval built-in. Citations included.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">BFSI</td>
+            <td class="abbrev-def">Banking, Financial Services & Insurance<em>Industry vertical with strict data sovereignty requirements; ideal for on-prem open-source deployment.</em><span class="abbrev-tag at-model">Sector</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- ARCHITECTURE -->
+      <div class="abbrev-card">
+        <div class="abbrev-card-header">🏗️ Architecture & Technical Terms</div>
+        <table class="abbrev-table">
+          <tr>
+            <td class="abbrev-term">MoE</td>
+            <td class="abbrev-def">Mixture of Experts<em>Architecture where only a subset of model parameters ("experts") are activated per token. Enables large capacity at lower inference cost. Used by Qwen, DeepSeek, Mixtral.</em><span class="abbrev-tag at-arch">Architecture</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">RAG</td>
+            <td class="abbrev-def">Retrieval-Augmented Generation<em>System where an LLM queries an external knowledge base before generating a response. Enhances factual accuracy without retraining.</em><span class="abbrev-tag at-arch">Architecture</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">CTX / Context</td>
+            <td class="abbrev-def">Context Window (in tokens)<em>Maximum input + output the model can process in one pass. 1M tokens ≈ ~750,000 words.</em><span class="abbrev-tag at-arch">Architecture</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">NLI</td>
+            <td class="abbrev-def">Natural Language Inference<em>Task of determining whether one text entails, contradicts, or is neutral toward another.</em><span class="abbrev-tag at-arch">Architecture</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">MCQ</td>
+            <td class="abbrev-def">Multiple Choice Question<em>Evaluation format used in MMLU; models choose from 4–10 answer options.</em><span class="abbrev-tag at-arch">Evaluation</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">API</td>
+            <td class="abbrev-def">Application Programming Interface<em>The endpoint through which developers access model capabilities. Pricing is typically per million input/output tokens.</em><span class="abbrev-tag at-arch">Infrastructure</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">GUI</td>
+            <td class="abbrev-def">Graphical User Interface<em>Desktop/web visual interfaces that AI agents navigate in computer-use benchmarks like OSWorld.</em><span class="abbrev-tag at-arch">Architecture</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">On-Prem</td>
+            <td class="abbrev-def">On-Premises Deployment<em>Running models on your own infrastructure (servers), rather than via a third-party cloud API. Maximises data sovereignty.</em><span class="abbrev-tag at-arch">Infrastructure</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- METRICS & SCORING -->
+      <div class="abbrev-card">
+        <div class="abbrev-card-header">📐 Metrics, Scoring & Industry Terms</div>
+        <table class="abbrev-table">
+          <tr>
+            <td class="abbrev-term">ELO</td>
+            <td class="abbrev-def">ELO Rating System (chess-origin)<em>Ranking method based on pairwise win/loss outcomes. Used by LMSYS Chatbot Arena to rank AI models by human preference.</em><span class="abbrev-tag at-metric">Metric</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">pp</td>
+            <td class="abbrev-def">Percentage Points<em>Absolute difference between two percentages (e.g., 94% − 90% = 4 pp), distinct from relative % change.</em><span class="abbrev-tag at-metric">Metric</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">STEM</td>
+            <td class="abbrev-def">Science, Technology, Engineering & Mathematics<em>Domain used to classify question categories in MMLU and other academic benchmarks.</em><span class="abbrev-tag at-metric">Domain</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">ROI</td>
+            <td class="abbrev-def">Return on Investment<em>Financial metric comparing cost to performance gain. Key in model selection (e.g., DeepSeek V4 offers high ROI on coding tasks).</em><span class="abbrev-tag at-metric">Business</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">pass@k</td>
+            <td class="abbrev-def">Pass-at-k Evaluation<em>Code benchmark metric: probability that at least 1 of k generated solutions passes test cases. Common in HumanEval.</em><span class="abbrev-tag at-metric">Metric</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">$/M</td>
+            <td class="abbrev-def">Cost per Million Tokens<em>Standard API pricing unit. Input tokens (your prompt) are typically 3–5× cheaper than output tokens.</em><span class="abbrev-tag at-metric">Pricing</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">LMSYS</td>
+            <td class="abbrev-def">Large Model Systems Organisation<em>UC Berkeley research group; runs the Chatbot Arena and maintains open ELO leaderboards.</em><span class="abbrev-tag at-metric">Organisation</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">DBT</td>
+            <td class="abbrev-def">Data Build Tool / Direct Benefit Transfer<em>Context-dependent: in data engineering, DBT is a SQL transformation framework. In government context, it means direct cash transfer to beneficiaries.</em><span class="abbrev-tag at-metric">Context</span></td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <span class="footer-text">Data sourced from Stanford AI Index 2026, Artificial Analysis, LLM Stats, LMSYS Arena, Perplexity Docs, and official model cards. Scores approximate, subject to change.</span>
+  <p class="footer-copyright">© 2026 <a href="https://prateekdutta2001.github.io/PrateekDutta.in/" target="_blank" rel="noopener noreferrer">PRATEEK DUTTA</a>. This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0).</p>
+  <span class="footer-logo">AI Benchmark 2026</span>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
