@@ -3,11 +3,58 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>AI Benchmarking</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<meta name="description" content="Enterprise AI Model Benchmarking 2026 — compare 36+ LLMs, use-case advisor, deployment guides, model validation, AI fundamentals, and RAG architecture tutorials."/>
+<title>AI Benchmarking 2026 — Enterprise Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ENTERPRISE NAV -->
+<nav class="enterprise-nav" id="enterpriseNav" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#" id="navBrandHome" aria-label="AI Benchmarking Home">
+      <span class="nav-brand-icon" aria-hidden="true">◈</span>
+      <span class="nav-brand-text">AI Benchmark<em>2026</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <div class="nav-menu" id="navMenu">
+      <div class="nav-guides-wrap" id="navGuidesWrap">
+        <button type="button" class="nav-guides-btn" id="guidesToggle" aria-expanded="false" aria-haspopup="true" aria-controls="guidesMenu">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Guides &amp; Tutorials
+          <svg class="nav-guides-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-guides-menu" id="guidesMenu" role="menu">
+          <a class="nav-guides-item" role="menuitem" href="https://prateekdutta2001.github.io/Intelligence.Agent/" target="_blank" rel="noopener noreferrer">
+            <span class="nav-guides-item-icon" aria-hidden="true">📚</span>
+            <span><strong>AI Basics &amp; Agents</strong><small>ML, neural nets, prompt engineering, agentic AI</small></span>
+          </a>
+          <a class="nav-guides-item" role="menuitem" href="https://prateekdutta2001.github.io/RAG_Agent/" target="_blank" rel="noopener noreferrer">
+            <span class="nav-guides-item-icon" aria-hidden="true">🔗</span>
+            <span><strong>RAG Architecture</strong><small>Naive, modular, agentic &amp; graph RAG workflows</small></span>
+          </a>
+          <a class="nav-guides-item" role="menuitem" href="https://prateekdutta2001.github.io/ModelSure/" target="_blank" rel="noopener noreferrer">
+            <span class="nav-guides-item-icon" aria-hidden="true">✓</span>
+            <span><strong>Model Validation</strong><small>Classic &amp; agentic validation techniques</small></span>
+          </a>
+          <a class="nav-guides-item" role="menuitem" href="https://prateekdutta2001.github.io/AI-Infra/" target="_blank" rel="noopener noreferrer">
+            <span class="nav-guides-item-icon" aria-hidden="true">🖥️</span>
+            <span><strong>AI Deployments</strong><small>On-prem Nvidia vs AWS / Azure architecture</small></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
 <!-- PAGE HEADER -->
 <header class="page-header">
@@ -20,15 +67,15 @@
     <div class="header-right">
       <div class="header-stat-row">
         <div class="hstat">
-          <div class="hstat-num">16</div>
+          <div class="hstat-num" id="headerModelCount">28</div>
           <div class="hstat-label">Models</div>
         </div>
         <div class="hstat">
-          <div class="hstat-num">4</div>
+          <div class="hstat-num">6</div>
           <div class="hstat-label">Benchmarks</div>
         </div>
         <div class="hstat">
-          <div class="hstat-num">3</div>
+          <div class="hstat-num">4</div>
           <div class="hstat-label">Paradigms</div>
         </div>
         <div class="hstat">
@@ -50,6 +97,11 @@
     <div class="insight-item"><div class="insight-dot"></div>Claude Opus 4.6: #1 coding arena Elo (1548) — Prose & reasoning leader</div>
     <div class="insight-item"><div class="insight-dot" style="background:#0E7C6B"></div>GLM-5: First frontier model trained entirely on non-NVIDIA hardware</div>
     <div class="insight-item"><div class="insight-dot" style="background:#6B3FB5"></div>Perplexity Pro: $20/mo — Most affordable search-augmented AI subscription</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#2E4A7A"></div>GPT-5.4 mini: 95% of frontier quality at 40% cost — Enterprise routing sweet spot</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#0E7C6B"></div>Mistral Large 3: EU-sovereign frontier model with 128K context & full fine-tuning</div>
+    <div class="insight-item"><div class="insight-dot" style="background:var(--gold)"></div>Phi-5: 14B params beats Llama 4 on MMLU — Edge deployment leader</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#D4E157"></div>Nemotron-4 340B: Nvidia flagship — 91.5% MMLU, NIM &amp; TensorRT optimized</div>
+    <div class="insight-item"><div class="insight-dot"></div>Claude Haiku 4.6: Fastest Anthropic tier — enterprise chat at $0.80/M tokens</div>
     <!-- duplicate for loop -->
     <div class="insight-item"><div class="insight-dot"></div>MMLU Gap: 17.5% (2024) → 0.3% (2026) — Benchmark parity achieved</div>
     <div class="insight-item"><div class="insight-dot" style="background:#0E7C6B"></div>DeepSeek V4: 83.7% SWE-bench Verified — Beats GPT-4.1 on coding</div>
@@ -58,31 +110,88 @@
     <div class="insight-item"><div class="insight-dot"></div>Claude Opus 4.6: #1 coding arena Elo (1548) — Prose & reasoning leader</div>
     <div class="insight-item"><div class="insight-dot" style="background:#0E7C6B"></div>GLM-5: First frontier model trained entirely on non-NVIDIA hardware</div>
     <div class="insight-item"><div class="insight-dot" style="background:#6B3FB5"></div>Perplexity Pro: $20/mo — Most affordable search-augmented AI subscription</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#2E4A7A"></div>GPT-5.4 mini: 95% of frontier quality at 40% cost — Enterprise routing sweet spot</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#0E7C6B"></div>Mistral Large 3: EU-sovereign frontier model with 128K context & full fine-tuning</div>
+    <div class="insight-item"><div class="insight-dot" style="background:var(--gold)"></div>Phi-5: 14B params beats Llama 4 on MMLU — Edge deployment leader</div>
+    <div class="insight-item"><div class="insight-dot" style="background:#D4E157"></div>Nemotron-4 340B: Nvidia flagship — 91.5% MMLU, NIM &amp; TensorRT optimized</div>
+    <div class="insight-item"><div class="insight-dot"></div>Claude Haiku 4.6: Fastest Anthropic tier — enterprise chat at $0.80/M tokens</div>
   </div>
 </div>
 
+<!-- RESOURCE HUB (landing page only) -->
+<section class="resource-hub" id="resourceHub" aria-label="Related enterprise guides and tutorials">
+  <div class="resource-hub-header">
+    <h2 class="resource-hub-title">AI Knowledge <em>Ecosystem</em></h2>
+    <p class="resource-hub-sub">From fundamentals to production — tutorials, validation, deployment, and RAG architecture in one connected learning path.</p>
+  </div>
+  <div class="resource-hub-inner">
+    <a class="resource-card resource-card-learn" href="https://prateekdutta2001.github.io/Intelligence.Agent/" target="_blank" rel="noopener noreferrer">
+      <div class="resource-card-icon" aria-hidden="true">📚</div>
+      <div class="resource-card-body">
+        <div class="resource-card-tag">Tutorial · Fundamentals</div>
+        <h3 class="resource-card-title">AI Basics &amp; Agents</h3>
+        <p class="resource-card-desc">Learn core AI concepts — machine learning, neural networks, prompt engineering, agentic AI, and real-world case studies. Start here if you're new to the stack.</p>
+        <span class="resource-card-cta">Explore Intelligence.Agent <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+      </div>
+    </a>
+    <a class="resource-card resource-card-rag" href="https://prateekdutta2001.github.io/RAG_Agent/" target="_blank" rel="noopener noreferrer">
+      <div class="resource-card-icon" aria-hidden="true">🔗</div>
+      <div class="resource-card-body">
+        <div class="resource-card-tag">Tutorial · Architecture</div>
+        <h3 class="resource-card-title">RAG &amp; Knowledge Workflows</h3>
+        <p class="resource-card-desc">Deep dive into Retrieval-Augmented Generation — naive, advanced, modular, agentic, and graph RAG. Architecture patterns for enterprise knowledge systems.</p>
+        <span class="resource-card-cta">Explore RAG Agent Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+      </div>
+    </a>
+    <a class="resource-card resource-card-infra" href="https://prateekdutta2001.github.io/AI-Infra/" target="_blank" rel="noopener noreferrer">
+      <div class="resource-card-icon" aria-hidden="true">🖥️</div>
+      <div class="resource-card-body">
+        <div class="resource-card-tag">Infrastructure Guide</div>
+        <h3 class="resource-card-title">AI Deployments</h3>
+        <p class="resource-card-desc">On-premises Nvidia GPU clusters vs AWS &amp; Azure managed AI — architecture, services, cost models, and decision frameworks for production deployment.</p>
+        <span class="resource-card-cta">Explore AI-Infra Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+      </div>
+    </a>
+    <a class="resource-card resource-card-validate" href="https://prateekdutta2001.github.io/ModelSure/" target="_blank" rel="noopener noreferrer">
+      <div class="resource-card-icon" aria-hidden="true">✓</div>
+      <div class="resource-card-body">
+        <div class="resource-card-tag">Validation Guide</div>
+        <h3 class="resource-card-title">Model Validation</h3>
+        <p class="resource-card-desc">Classic &amp; agentic model validation techniques — train/test splits, cross-validation, metrics, bias-variance diagnosis, clustering validation, and end-to-end workflows.</p>
+        <span class="resource-card-cta">Explore ModelSure Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+      </div>
+    </a>
+  </div>
+</section>
+
 <!-- MAIN -->
-<main class="main-wrap">
+<main class="main-wrap" id="main-content">
 
   <!-- TABS -->
   <div class="tab-row">
-    <button class="tab-btn active" onclick="switchTab('benchmarks', this)">
+    <button class="tab-btn active" data-tab="benchmarks" onclick="switchTab('benchmarks', this)">
       <span class="tab-icon">📊</span> Benchmarks
     </button>
-    <button class="tab-btn" onclick="switchTab('trends', this)">
+    <button class="tab-btn" data-tab="models" onclick="switchTab('models', this)">
+      <span class="tab-icon">🤖</span> Models
+    </button>
+    <button class="tab-btn" data-tab="advisor" onclick="switchTab('advisor', this)">
+      <span class="tab-icon">🎯</span> Use Case Advisor
+    </button>
+    <button class="tab-btn" data-tab="trends" onclick="switchTab('trends', this)">
       <span class="tab-icon">📈</span> Trends & ELO
     </button>
-    <button class="tab-btn" onclick="switchTab('comparison', this)">
+    <button class="tab-btn" data-tab="comparison" onclick="switchTab('comparison', this)">
       <span class="tab-icon">⚖️</span> Comparison
     </button>
-    <button class="tab-btn" onclick="switchTab('strategy', this)">
+    <button class="tab-btn" data-tab="strategy" onclick="switchTab('strategy', this)">
       <span class="tab-icon">🗺️</span> Strategy
     </button>
-    <button class="tab-btn" onclick="switchTab('findings', this)">
+    <button class="tab-btn" data-tab="findings" onclick="switchTab('findings', this)">
       <span class="tab-icon">🔬</span> Findings
     </button>
-    <button class="tab-btn" onclick="switchTab('abbreviations', this)">
-      <span class="tab-icon">📖</span> Abbreviations
+    <button class="tab-btn" data-tab="abbreviations" onclick="switchTab('abbreviations', this)">
+      <span class="tab-icon">📖</span> Glossary
     </button>
   </div>
 
@@ -106,6 +215,7 @@
         <option value="Frontier">Frontier</option>
         <option value="Open-Source">Open-Source</option>
         <option value="Perplexity">Perplexity / Search-Augmented</option>
+        <option value="Nvidia">Nvidia / Nemotron</option>
       </select>
       <div class="controls-divider"></div>
       <button class="btn btn-outline" onclick="exportBenchCSV()">
@@ -120,11 +230,12 @@
       <button type="button" class="pill pill-cat" data-cat="Frontier" onclick="setBenchPill('Frontier')">🔬 Frontier / Proprietary</button>
       <button type="button" class="pill pill-cat" data-cat="Open-Source" onclick="setBenchPill('Open-Source')">🔓 Open-Source</button>
       <button type="button" class="pill pill-cat" data-cat="Perplexity" onclick="setBenchPill('Perplexity')">🌐 Perplexity / Search-Aug.</button>
+      <button type="button" class="pill pill-cat" data-cat="Nvidia" onclick="setBenchPill('Nvidia')">🟢 Nvidia / Nemotron</button>
     </div>
 
     <!-- Results meta -->
     <div class="results-meta">
-      <div class="results-count">Showing <strong id="benchFilteredCount">16</strong> of <strong id="benchTotalCount">16</strong> models</div>
+      <div class="results-count">Showing <strong id="benchFilteredCount">28</strong> of <strong id="benchTotalCount">28</strong> models</div>
     </div>
 
     <!-- Benchmark Table -->
@@ -157,7 +268,124 @@
       </div>
     </div>
 
-    <p style="font-size:12px;color:var(--slate);margin-top:12px;font-family:var(--font-mono);">* Perplexity Sonar models are search-augmented; GPQA/SWE scores reflect underlying base model + retrieval. Context = live web.</p>
+    <p class="table-footnote">* Perplexity Sonar models are search-augmented; GPQA/SWE scores reflect underlying base model + retrieval. Context = live web. † Perplexity pricing per 1K requests.</p>
+
+  </div>
+
+  <!-- ═══ TAB: MODELS CATALOG ═══ -->
+  <div class="tab-panel" id="tab-models">
+
+    <div class="section-heading">
+      <div class="section-label-tag">// Model Catalog · Q2 2026</div>
+      <h2>Latest <em>LLM Landscape</em></h2>
+      <p>Comprehensive profiles of frontier proprietary, open-weight, and search-augmented models — parameters, capabilities, release dates, and deployment notes.</p>
+    </div>
+
+    <div class="controls-card">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="search-input" type="text" id="modelSearchBox" placeholder="Search models by name, org, or capability…" oninput="filterModelCatalog()">
+      </div>
+      <select class="filter-select" id="modelTypeFilter" onchange="filterModelCatalog()">
+        <option value="">All categories</option>
+        <option value="Frontier">Frontier / Proprietary</option>
+        <option value="Open-Source">Open-Source / Open-Weight</option>
+        <option value="Perplexity">Perplexity / Search-Augmented</option>
+        <option value="Nvidia">Nvidia / Nemotron</option>
+      </select>
+    </div>
+
+    <div class="pill-row" id="modelPillRow">
+      <button type="button" class="pill pill-all" id="model-pill-all" onclick="setModelPill('')">All Models</button>
+      <button type="button" class="pill pill-cat" data-cat="Frontier" onclick="setModelPill('Frontier')">🔬 Frontier</button>
+      <button type="button" class="pill pill-cat" data-cat="Open-Source" onclick="setModelPill('Open-Source')">🔓 Open-Source</button>
+      <button type="button" class="pill pill-cat" data-cat="Perplexity" onclick="setModelPill('Perplexity')">🌐 Search-Augmented</button>
+      <button type="button" class="pill pill-cat" data-cat="Nvidia" onclick="setModelPill('Nvidia')">🟢 Nvidia</button>
+    </div>
+
+    <div class="results-meta">
+      <div class="results-count">Showing <strong id="modelFilteredCount">28</strong> models</div>
+    </div>
+
+    <div class="model-catalog" id="modelCatalog"></div>
+    <div id="modelEmptyState" class="empty-state" style="display:none;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <strong>No models found</strong>
+      <p>Try a different search term or category filter.</p>
+    </div>
+
+  </div>
+
+  <!-- ═══ TAB: USE CASE ADVISOR ═══ -->
+  <div class="tab-panel" id="tab-advisor">
+
+    <div class="section-heading">
+      <div class="section-label-tag">// Model Selection Advisor</div>
+      <h2>Find the Right <em>Model for Your Use Case</em></h2>
+      <p>Select your domain and priorities — we'll suggest the best-suited models based on benchmark data and deployment fit. Always validate on your own data before production.</p>
+    </div>
+
+    <div class="advisor-layout">
+      <div class="advisor-form-card">
+        <h3 class="advisor-form-title">Your Requirements</h3>
+
+        <label class="advisor-label" for="useCaseDomain">Use Case Domain <span class="required">*</span></label>
+        <select class="filter-select advisor-select" id="useCaseDomain" required>
+          <option value="">— Select your domain —</option>
+        </select>
+
+        <label class="advisor-label" for="priorityMode">Selection Priority</label>
+        <select class="filter-select advisor-select" id="priorityMode">
+          <option value="balanced">Balanced (quality + cost)</option>
+          <option value="quality">Best Quality (peak benchmarks)</option>
+          <option value="cost">Cost Optimized (lowest API spend)</option>
+          <option value="sovereignty">Data Sovereignty (on-prem / self-host)</option>
+          <option value="latency">Low Latency (fast inference)</option>
+        </select>
+
+        <label class="advisor-label" for="dataSensitivity">Data Sensitivity</label>
+        <select class="filter-select advisor-select" id="dataSensitivity">
+          <option value="standard">Standard (non-regulated)</option>
+          <option value="regulated">Regulated (HIPAA, GDPR, BFSI)</option>
+          <option value="airgap">Air-gapped / No external API</option>
+        </select>
+
+        <div class="advisor-terms">
+          <label class="terms-checkbox-label">
+            <input type="checkbox" id="termsAccept" class="terms-checkbox"/>
+            <span>I understand these are <strong>experimental recommendations</strong> only. Results may vary based on data quality, domain specifics, prompt design, fine-tuning, and environmental parameters. I will validate models on my own data before production use.</span>
+          </label>
+        </div>
+
+        <button type="button" class="btn btn-primary advisor-submit" id="advisorSubmit" onclick="runUseCaseAdvisor()" disabled>
+          Get Model Recommendations
+        </button>
+      </div>
+
+      <div class="advisor-results-wrap">
+        <div class="advisor-disclaimer" role="note" aria-label="Terms and conditions">
+          <div class="disclaimer-icon" aria-hidden="true">⚠️</div>
+          <div>
+            <strong>Terms &amp; Conditions — Experimental Basis Only</strong>
+            <p>Recommendations are derived from published benchmark scores and general deployment patterns. Actual performance <em>will vary</em> based on: nature and volume of your data, domain-specific terminology, class imbalance, prompt engineering, retrieval quality (for RAG), inference parameters (temperature, top-p), hardware configuration, and model version updates. Models may exhibit hallucination, bias, or inappropriate behaviour on edge cases not covered by public benchmarks. <strong>Always conduct your own validation experiments</strong> — including holdout testing and agentic evaluation where applicable — before any production deployment. See the <a href="https://prateekdutta2001.github.io/ModelSure/" target="_blank" rel="noopener noreferrer" class="inline-link">ModelSure Validation Guide</a> for methodology.</p>
+          </div>
+        </div>
+
+        <div id="advisorPlaceholder" class="advisor-placeholder">
+          <div class="advisor-placeholder-icon" aria-hidden="true">🎯</div>
+          <p>Select a use case domain and accept the terms to receive tailored model recommendations.</p>
+        </div>
+
+        <div id="advisorResults" class="advisor-results" style="display:none;" aria-live="polite">
+          <div class="advisor-results-header">
+            <h3 id="advisorResultsTitle">Recommended Models</h3>
+            <p id="advisorResultsSub" class="advisor-results-sub"></p>
+          </div>
+          <div id="advisorResultsList" class="advisor-results-list"></div>
+          <p class="advisor-results-footnote">Rankings are indicative. Run A/B tests on your workload. For deployment architecture, see <a href="https://prateekdutta2001.github.io/AI-Infra/" target="_blank" rel="noopener noreferrer" class="inline-link">AI-Infra</a>.</p>
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -215,7 +443,7 @@
           <div class="comp-icon icon-frontier">🔬</div>
           <div>
             <div class="comp-title">Frontier / Proprietary</div>
-            <div class="comp-sub">GPT-5.4, Claude Opus 4.6, Gemini 3.1</div>
+            <div class="comp-sub">Claude Opus 4.6, Sonnet 4.6, Haiku 4.6, GPT-5.4, Gemini 3.1</div>
           </div>
         </div>
         <div class="metric-row"><span class="metric-label">Peak GPQA Diamond</span><span class="metric-value val-frontier">94.6%</span></div>
@@ -234,7 +462,7 @@
           <div class="comp-icon icon-open">🔓</div>
           <div>
             <div class="comp-title">Open-Source / Open-Weight</div>
-            <div class="comp-sub">Llama 4, DeepSeek V4, Qwen 3.6, GLM-5</div>
+            <div class="comp-sub">DeepSeek V4, Nemotron-4 340B, Qwen 3.6, Llama 4, Phi-5</div>
           </div>
         </div>
         <div class="metric-row"><span class="metric-label">Peak GPQA Diamond</span><span class="metric-value val-open">90.5% (Kimi K2.6)</span></div>
@@ -315,6 +543,18 @@
         <div class="strat-title">High-Volume, Latency-Sensitive APIs</div>
         <div class="strat-desc">Route complex queries to frontier; standard queries to Claude Sonnet 4.6 or Qwen 3.5; search tasks to Perplexity Sonar Small. Intelligent routing can cut costs 60–70% with negligible quality loss.</div>
         <span class="strat-tag tag-hybrid">Hybrid Routing</span>
+      </div>
+      <div class="strat-card c7">
+        <span class="strat-emoji">🖥️</span>
+        <div class="strat-title">Infrastructure &amp; Deployment</div>
+        <div class="strat-desc">Choose on-premises Nvidia GPU clusters for sustained workloads and data sovereignty, or AWS/Azure managed services for elastic scale. See the <a href="https://prateekdutta2001.github.io/AI-Infra/" target="_blank" rel="noopener noreferrer" class="inline-link">AI-Infra Guide</a> for full architecture comparison.</div>
+        <span class="strat-tag tag-caution">See AI-Infra →</span>
+      </div>
+      <div class="strat-card c8">
+        <span class="strat-emoji">✓</span>
+        <div class="strat-title">Model Validation Before Production</div>
+        <div class="strat-desc">Validate models with cross-validation, holdout test sets, and task-specific metrics before deployment. The <a href="https://prateekdutta2001.github.io/ModelSure/" target="_blank" rel="noopener noreferrer" class="inline-link">ModelSure Guide</a> covers classic and agentic validation workflows end-to-end.</div>
+        <span class="strat-tag tag-caution">See ModelSure →</span>
       </div>
     </div>
 
@@ -457,6 +697,30 @@
             <td class="abbrev-def">Perplexity AI's Search-Augmented Model Family<em>Sonar Small / Sonar / Sonar Huge — LLMs with real-time web retrieval built-in. Citations included.</em><span class="abbrev-tag at-model">Model</span></td>
           </tr>
           <tr>
+            <td class="abbrev-term">Phi-5</td>
+            <td class="abbrev-def">Microsoft Small Language Model<em>14B parameter edge-optimized model. Beats Llama 4 on MMLU; ideal for on-device and low-latency deployment.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">Mistral</td>
+            <td class="abbrev-def">Mistral AI Model Family<em>EU-based frontier and open models. Large 3 (frontier), Small 3.2 (efficient), Mixtral MoE variants.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">Command R+</td>
+            <td class="abbrev-def">Cohere Enterprise RAG Model<em>104B parameter model optimized for retrieval-augmented generation and multilingual enterprise workflows.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">Nemotron</td>
+            <td class="abbrev-def">Nvidia LLM Family<em>Nemotron-4 340B, 70B, Nano 12B — open-weight models tuned with NeMo, deployable via NIM and TensorRT-LLM on Nvidia GPUs.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">NIM</td>
+            <td class="abbrev-def">Nvidia Inference Microservices<em>Containerized model serving for optimized GPU inference. Deploy Nemotron and partner models on-prem or cloud.</em><span class="abbrev-tag at-infra">Infrastructure</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">Claude</td>
+            <td class="abbrev-def">Anthropic Model Family<em>Opus 4.6 (peak), Sonnet 4.6 (balanced), Haiku 4.6 (fast), 3.7 Sonnet (extended thinking). Available via API and AWS Bedrock.</em><span class="abbrev-tag at-model">Model</span></td>
+          </tr>
+          <tr>
             <td class="abbrev-term">BFSI</td>
             <td class="abbrev-def">Banking, Financial Services & Insurance<em>Industry vertical with strict data sovereignty requirements; ideal for on-prem open-source deployment.</em><span class="abbrev-tag at-model">Sector</span></td>
           </tr>
@@ -498,6 +762,14 @@
           <tr>
             <td class="abbrev-term">On-Prem</td>
             <td class="abbrev-def">On-Premises Deployment<em>Running models on your own infrastructure (servers), rather than via a third-party cloud API. Maximises data sovereignty.</em><span class="abbrev-tag at-arch">Infrastructure</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">CV</td>
+            <td class="abbrev-def">Cross-Validation<em>Rotating train/test splits to get stable performance estimates. See <a href="https://prateekdutta2001.github.io/ModelSure/" target="_blank" rel="noopener noreferrer" class="inline-link">ModelSure</a> for k-Fold, stratified, and LOO techniques.</em><span class="abbrev-tag at-training">Validation</span></td>
+          </tr>
+          <tr>
+            <td class="abbrev-term">Agentic Val.</td>
+            <td class="abbrev-def">Agentic Model Validation<em>Validating AI agents on multi-step tasks, tool use, and trajectory quality — beyond static benchmark scores. Covered in ModelSure classic &amp; agentic sections.</em><span class="abbrev-tag at-training">Validation</span></td>
           </tr>
         </table>
       </div>
@@ -548,9 +820,35 @@
 
 <!-- FOOTER -->
 <footer class="page-footer">
-  <span class="footer-text">Data sourced from Stanford AI Index 2026, Artificial Analysis, LLM Stats, LMSYS Arena, Perplexity Docs, and official model cards. Scores approximate, subject to change.</span>
-  <p class="footer-copyright">© 2026 <a href="https://prateekdutta2001.github.io/PrateekDutta.in/" target="_blank" rel="noopener noreferrer">PRATEEK DUTTA</a>. This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0).</p>
-  <span class="footer-logo">AI Benchmark 2026</span>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-brand">AI Benchmark 2026</div>
+      <p class="footer-text">Enterprise-grade performance analysis for frontier, open-source, and search-augmented AI models. Data sourced from Stanford AI Index 2026, Artificial Analysis, LLM Stats, LMSYS Arena, and official model cards.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Tutorials &amp; Guides</div>
+      <a class="footer-link" href="https://prateekdutta2001.github.io/Intelligence.Agent/" target="_blank" rel="noopener noreferrer">AI Basics &amp; Agentic Systems</a>
+      <a class="footer-link" href="https://prateekdutta2001.github.io/RAG_Agent/" target="_blank" rel="noopener noreferrer">RAG Architecture Deep Dive</a>
+      <a class="footer-link" href="https://prateekdutta2001.github.io/AI-Infra/" target="_blank" rel="noopener noreferrer">AI Infrastructure &amp; Deployments</a>
+      <a class="footer-link" href="https://prateekdutta2001.github.io/ModelSure/" target="_blank" rel="noopener noreferrer">Model Validation (Classic &amp; Agentic)</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Report Sections</div>
+      <button class="footer-link footer-link-btn" data-tab="benchmarks">Benchmarks</button>
+      <button class="footer-link footer-link-btn" data-tab="models">Model Catalog</button>
+      <button class="footer-link footer-link-btn" data-tab="advisor">Use Case Advisor</button>
+      <button class="footer-link footer-link-btn" data-tab="strategy">Strategy</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copyright">© 2026 <a href="https://prateekdutta2001.github.io/PrateekDutta.in/" target="_blank" rel="noopener noreferrer">PRATEEK DUTTA</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.</p>
+    <div class="visitor-counter" id="visitorCounter" aria-live="polite" title="Total platform visits — updates in real time">
+      <span class="visitor-counter-live" aria-hidden="true"><span class="visitor-pulse"></span> Live</span>
+      <span class="visitor-counter-label">Total Visitors</span>
+      <span class="visitor-counter-num" id="visitorCount">384</span>
+    </div>
+    <span class="footer-badge">Q2 2026 Edition</span>
+  </div>
 </footer>
 
 <div class="toast" id="toast"></div>
